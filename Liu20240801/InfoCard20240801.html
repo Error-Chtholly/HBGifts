@@ -1,0 +1,243 @@
+<!-- All rights reserved by Error Chtholly. -->
+<!-- 我将秉承我一生中重要之人的思念，当初樱花树下的誓言；
+心中怀有鸿鹄之志，那最初的炽烈之愿；
+不断向着未知的远方探索前进，去燃烧这旧世界；
+直到旅途的尽头，可以安静的欣赏一场雨景，去见证一切事物的沉淀。 -->
+<!-- I will uphold the longing for the important person in my life, the oath I made under the cherry blossom tree;
+With lofty aspirations in my heart, that initial fervent wish;
+Continuously exploring and advancing towards unknown distant places, to burn this old world;
+Until the end of the journey, one can quietly appreciate a rainy scene and witness the precipitation of everything. -->
+<!-- 愿你如樱花一般纯洁。
+愿你如鸟雀一般自由。
+愿你如列车一般开拓。
+愿你如落雨一般浪漫。 -->
+<!-- May you be as pure as cherry blossoms.
+May you be as free as a bird.
+May you explore like a train.
+May you be as romantic as the rain. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "consolas";
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(200deg, #fff1eb, #ace0f9);
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+        }
+
+        .card {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 20px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .card .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+        }
+
+        .card .box .img-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card .box .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 9px;
+            box-shadow: 0 0 10px rgba(149, 0, 255, 1);
+        }
+
+        .card .box .con-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+            border-radius: 9px;
+            box-shadow: 0 0 10px rgba(149, 0, 255, 1);
+        }
+
+        .card .box .con-box div {
+            color: #fff;
+            padding: 20px;
+            background: linear-gradient(30deg, #514a9d, #24c6dc);
+            transform: translateZ(100px);
+            border-radius: 9px;
+            box-shadow: 0 0 10px rgba(149, 0, 255, 1);
+        }
+
+        .card .box .con-box div h2 {
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0 0 6px rgb(255, 255, 255);
+        }
+
+        .card .box .con-box div p {
+            font-size: 15px;
+            text-align: center;
+            margin-top: 5px;
+            text-shadow: 0 0 6px rgb(255, 255, 255);
+        }
+
+        .card:hover .box {
+            transform: rotateY(180deg);
+        }
+
+        #btn {
+            float: left;
+            padding: 0 10px;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #btn:hover {
+            box-shadow: 0px 0px 14px #ffffff;
+        }
+
+        #btn2 {
+            float: right;
+            padding: 0 10px;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #btn2:hover {
+            box-shadow: 0px 0px 14px #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="./musics/李荣浩 - 老街.mp3" type="audio/mpeg">
+    </audio>
+    <section>
+        <div class="card">
+            <div class="box">
+                <div class="img-box">
+                    <img src="./images/Sakura.jpg" alt="">
+                </div>
+                <div class="con-box">
+                    <div>
+                        <h2>Sakura</h2>
+                        <p>I will uphold the longing for the important person in my life, the oath I made under the
+                            cherry blossom tree; May you be as pure as cherry blossoms.</p>
+                        <br />
+                        <button id="btn" onclick="Pictures()">Pictures</button>
+                        <button id="btn2" onclick="Back()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="img-box">
+                    <img src="./images/Peace Dove.jpg" alt="">
+                </div>
+                <div class="con-box">
+                    <div>
+                        <h2>Peace Dove</h2>
+                        <p>With lofty aspirations in my heart, that initial fervent wish; May you be as free as a bird.
+                        </p>
+                        <br />
+                        <button id="btn" onclick="Pictures()">Pictures</button>
+                        <button id="btn2" onclick="Back()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="img-box">
+                    <img src="./images/Train.jpg" alt="">
+                </div>
+                <div class="con-box">
+                    <div>
+                        <h2>Train</h2>
+                        <p>Continuously exploring and advancing towards unknown distant places, to burn this old world;
+                            May you explore like a train.
+                        </p>
+                        <br />
+                        <button id="btn" onclick="Pictures()">Pictures</button>
+                        <button id="btn2" onclick="Back()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="img-box">
+                    <img src="./images/Raining.jpg" alt="">
+                </div>
+                <div class="con-box">
+                    <div>
+                        <h2>Raining</h2>
+                        <p>Until the end of the journey, one can quietly appreciate a rainy scene and witness the
+                            precipitation of everything. May you be as romantic as the rain.</p>
+                        <br />
+                        <button id="btn" onclick="Pictures()">Pictures</button>
+                        <button id="btn2" onclick="Back()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function Pictures() {
+            window.location.href = "./3DPic20240801.html";
+        }
+
+        function Back() {
+            window.location.href = "./StarryNight20240801.html";
+        }
+    </script>
+</body>
+
+</html>
