@@ -206,10 +206,15 @@
             font-weight: 600;
             width: 100px;
             margin-top: 10px;
+            transition: all 0.3s ease;
         }
 
         .box form input[type="submit"]:active {
             opacity: 0.8;
+        }
+
+        .box form input[type="submit"]:hover {
+            box-shadow: 0 0 14px #fff;
         }
 
         .r {
@@ -258,6 +263,7 @@
             if (username.value == "happybirthday" && password.value == "20240801") {
                 alert("Error Chtholly: \nLogin successful! Happy birthday to you, Liu Weiting! Please feel free to sting!");
                 window.open("./StarryNight20240801.html");
+                window.close();
             } else {
                 alert("Error Chtholly: \nUsername or password incorrect, please re-enter! If you are not Liu Weiting or today is not your birthday, please be prepared to be stung!");
             }
