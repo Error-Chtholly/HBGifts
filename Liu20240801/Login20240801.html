@@ -136,6 +136,19 @@
                 alert("Error Chtholly: \nUsername or password incorrect, please re-enter! If you are not Liu Weiting or today is not your birthday, please be prepared to be stung!");
             }
         }
+
+        //添加键盘回车事件
+        const Btn = document.querySelector(".btn");
+        usernme.onkeydown = function (event) { //给输入框添加键盘事件处理函数
+            if (event.keyCode == 13) { //按下回车键
+                Btn.click(); //触发按钮的点击事件
+            }
+        }
+        password.onkeydown = function (event) { //给输入框添加键盘事件处理函数
+            if (event.keyCode == 13) { //按下回车键
+                Btn.click(); //触发按钮的点击事件
+            }
+        }
     </script>
 </body>
 
