@@ -1,0 +1,6 @@
+Login：登录！用户名：happybirthday 密码：20240801
+StarryNight：祝福主界面！
+Words：祝福寄语！
+Pictures：3D照骗墙！
+Back：返回到主界面！
+最后祝你生日快乐！Liu！
